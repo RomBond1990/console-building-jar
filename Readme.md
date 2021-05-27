@@ -1,4 +1,4 @@
-#Bulding .jar from terminal
+# Bulding .jar from terminal
 ###### * for windows terminal
 ##### 1. To compile `*.java` into `*.class` use (from root folder)
 ```
