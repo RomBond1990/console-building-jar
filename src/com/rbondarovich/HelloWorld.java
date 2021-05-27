@@ -7,7 +7,8 @@ public class HelloWorld {
         System.out.println("Hello world!!!");
         String[] schemes = {"http", "https"};
         UrlValidator urlValidator = new UrlValidator(schemes);
-        if(urlValidator.isValid("https://github.com/RomBond1990")) System.out.println("Library is working");
-        
+        if (urlValidator.isValid("https://github.com/RomBond1990")) {
+            System.out.println("Library is working");
+        }
     }
 }
