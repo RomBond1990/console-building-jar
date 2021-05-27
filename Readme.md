@@ -10,7 +10,7 @@ The compiled files will be located in the classes folder
 ```
 java -cp classes com.rbondarovich.HelloWorld
 ```
-##### 3. To building jar
+##### 3. To build jar
 ```
 $cd classes
 $jar cfe programmName.jar com.rbondarovich.HelloWorld com/rbondarovich/*.class
@@ -28,16 +28,23 @@ java -jar  programmName.jar
 ```
 
 # With libs
+([source](https://dzone.com/articles/java-8-how-to-create-executable-fatjar-without-ide))
 ##### 1. To compile `*.java` into `*.class` use (from root folder)
 ```
 $javac -cp src/com/rbondarovich src/com/rbondarovich/*.java -d out/ -classpath libs/commons-validator-1.6.jar
+```
+##### 2. Build preparation
+```
 $copy libs\commons-validator-1.6.jar out\commons-validator-1.6.jar
 $cd out
 $tar xf commons-validator-1.6.jar
 $del commons-validator-1.6.jar
+```
+##### 3. To build jar
+```
 $jar cvfm  programmName.jar ..\resources\META-INF\MANIFEST.MF .
 ```
-##### 2. To run app
+##### 4. To run app
 ```
 java -jar  programmName.jar
 ```
